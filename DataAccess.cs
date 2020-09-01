@@ -65,11 +65,6 @@ namespace MongoCrud
             collection.DeleteOne(filter);
         }
 
-        //public void DeleteAll<T>(string table, string id, T record)
-        //{
-        //    var collection = db.GetCollection<T>(table);
-        //    var filter = Builders<T>.Filter.Eq("Id", id);
-        //    collection.DeleteMany()
-        //}
+       
     }
 }
