@@ -1,0 +1,9 @@
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\bin\Release\netstandard2.0\MongoCrud.deps.json
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\bin\Release\netstandard2.0\MongoCrud.dll
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\bin\Release\netstandard2.0\MongoCrud.pdb
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.csprojAssemblyReference.cache
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.AssemblyInfoInputs.cache
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.AssemblyInfo.cs
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.csproj.CoreCompileInputs.cache
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.dll
+C:\Users\barry\Documents\Visual Studio 2019\MongoCrud\obj\Release\netstandard2.0\MongoCrud.pdb
