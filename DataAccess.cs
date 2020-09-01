@@ -57,8 +57,7 @@ namespace MongoCrud
                          replaceOptions);
 
         }
-
-
+        //comment
         public void Delete<T>(string table, string id, T record) {
             var collection = db.GetCollection<T>(table);
             var filter = Builders<T>.Filter.Eq("Id", id);
