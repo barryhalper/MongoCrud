@@ -2,6 +2,7 @@
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MongoCrud
 {
@@ -28,6 +29,13 @@ namespace MongoCrud
 
 
 
+        public async Task CreateAsync<T>(string table, T record)
+        {
+            var collection = db.GetCollection<T>(table);
+            await collection.InsertOneAsync(record);
+        }
+
+
         public void Create<T>(string table, T record)
         {
             var collection = db.GetCollection<T>(table);
@@ -47,6 +55,9 @@ namespace MongoCrud
             return collection.Find(filter).First();
         }
 
+      
+
+
         public void Upsert<T>(string table, string id, T record)
         {
             var collection = db.GetCollection<T>(table);
@@ -57,7 +68,8 @@ namespace MongoCrud
                          replaceOptions);
 
         }
-        //comment
+
+        //comment 
         public void Delete<T>(string table, string id, T record) {
             var collection = db.GetCollection<T>(table);
             var filter = Builders<T>.Filter.Eq("Id", id);
