@@ -48,6 +48,12 @@ namespace MongoCrud
             return collection.Find(new BsonDocument()).ToList();
         }
 
+        public IMongoCollection<T> GetCollection<T>(string table)
+        {
+            return db.GetCollection<T>(table);
+           
+        }
+
         public T ReadById<T>(string table, string id)
         {
             var collection = db.GetCollection<T>(table);
@@ -55,10 +61,15 @@ namespace MongoCrud
             return collection.Find(filter).First();
         }
 
-      
+        public T ReadByProperty<T>(string table, string propertyName, string value)
+        {
+            var collection = db.GetCollection<T>(table);
+            var filter = Builders<T>.Filter.Eq(propertyName, value);
+            return collection.Find(filter).First();
+        }
 
 
-        public void Upsert<T>(string table, string id, T record)
+        public void Upsert<T>(string table,  string id, T record)
         {
             var collection = db.GetCollection<T>(table);
             ReplaceOptions replaceOptions = new ReplaceOptions { IsUpsert = true };
@@ -68,6 +79,21 @@ namespace MongoCrud
                          replaceOptions);
 
         }
+
+       
+
+        //public void Upsert<T>(string table, string propertyName, string propertyValue, T record)
+        //{
+        //    var collection = db.GetCollection<T>(table);
+        //    UpdateOptions replaceOptions = new UpdateOptions { IsUpsert = true };
+        //    var filter = Builders<T>.Filter.Eq(propertyName, propertyValue);
+        //    var result = collection.UpdateOne(filter,
+        //                 record,
+        //                 replaceOptions);
+
+        //}
+
+
 
         //comment 
         public void Delete<T>(string table, string id, T record) {
